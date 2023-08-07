@@ -94,11 +94,12 @@ ul li {
 .input--text:focus {
   outline: none;
 }
-.btn--form {
-  padding: 2rem;
+
+.btn {
+  padding: 1.9rem 0;
   font-size: 1.4rem;
   margin-top: 2.6rem;
-  background-color: var(--dark--grey);
+  background: var(--dark--grey);
   color: var(--white);
   width: 100%;
   border: none;
@@ -106,7 +107,31 @@ ul li {
   font-weight: 500;
   cursor: pointer;
   letter-spacing: 0.6px;
+  box-shadow: 3px 3px 6px rgb(51, 51, 51, 0.1);
 }
+
+.btn--form {
+  position: relative;
+  z-index: 2;
+}
+.btn--form::before {
+  content: 'Subscribe to monthly newsletter';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(255, 62, 131), rgb(255, 106, 58));
+  opacity: 0;
+  z-index: 1;
+  border-radius: 8px;
+  transition: opacity 200ms ease;
+}
+
+.btn--form:hover::before {
+  opacity: 1;
+}
+
 .success {
   max-width: 44rem;
   max-height: 44rem;
