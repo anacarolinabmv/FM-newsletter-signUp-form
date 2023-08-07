@@ -8,7 +8,7 @@
     <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   </head>
   <body>
-    <div class="container">
+    <div class="form--container">
       <div class="text">
         <h1>Stay updated!</h1>
 
@@ -16,7 +16,7 @@
 
         <ul>
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 21 21">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 21">
               <g fill="none">
                 <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
                 <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
@@ -25,7 +25,7 @@
             Product discovery and building what matters
           </li>
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 21 21">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 21">
               <g fill="none">
                 <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
                 <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
@@ -34,7 +34,7 @@
             Measuring to ensure updates are a success
           </li>
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 21 21">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 21">
               <g fill="none">
                 <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
                 <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
@@ -46,26 +46,21 @@
 
         <form>
           <div class="form--labels">
-            <label for="input">Email address</label>
-            <small id="error--msg">Valid email required</small>
+            <label for="input" class="label--email">Email address</label>
+            <small class="error--msg" id="error--msg">Valid email required</small>
           </div>
           <input
             type="text"
             name="input"
-            class="text--input"
+            class="input--text"
             id="input"
             placeholder=" email@company.com "
             autocomplete="off" />
-          <button type="submit" class="btn--form" id="btn">Subscribe to monthly newsletter</button>
+          <button type="submit" class="btn--form" id="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
       <div class="img">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          width="400"
-          height="500"
-          viewBox="0 0 400 593">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 593">
           <defs>
             <linearGradient id="b" x1="72.75%" x2="27.25%" y1="0%" y2="100%">
               <stop offset="0%" stop-color="#FF6A3A" />

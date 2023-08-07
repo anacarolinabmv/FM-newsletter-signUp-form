@@ -23,18 +23,18 @@ body {
   align-items: center;
   background-color: var(--charcoal-grey);
 }
-.container {
+.form--container {
   background-color: var(--white);
-  border-radius: 16px;
+  border-radius: 40px;
   display: grid;
-  grid-template-columns: 1fr 400px;
-  padding: 2rem 0;
-  max-width: 84rem;
+  grid-template-columns: 1fr 40rem;
+  max-width: 90rem;
   min-width: 81rem;
+  padding: 2.6rem;
 }
 
 .text {
-  padding: 5rem 0rem 2rem 6rem;
+  padding: 8rem 5.6rem 3rem 3rem;
 }
 h1 {
   color: var(--dark--grey);
@@ -45,9 +45,12 @@ h1 {
 }
 p {
   font-size: 1.6rem;
-  margin-bottom: 3rem;
   line-height: 1.4;
 }
+ul {
+  margin-top: 3rem;
+}
+
 ul li {
   list-style: none;
   font-size: 1.6rem;
@@ -59,52 +62,54 @@ ul li {
 .form--labels {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 4rem 0 0.6rem;
+  margin: 4rem 0 0.8rem;
 }
-label {
-  font-size: 1.08rem;
+.label--email {
+  font-size: 1.2rem;
   font-weight: 700;
   display: block;
   color: var(--dark--grey);
 }
-small {
+.error--msg {
   color: var(--tomato);
-  font-size: 1.08rem;
+  font-size: 1.2rem;
   font-weight: 500;
   display: none;
 }
 .show--error {
   display: block;
 }
-.text--input {
-  padding: 0.8rem;
+.input--text {
+  padding: 1.6rem;
   width: 100%;
+  font-size: 1.6rem;
   border: 1px solid #bbb;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .error {
-  border-color: rgb(255, 98, 87, 0.7);
+  border-color: rgb(255, 98, 87, 0.8);
   background-color: rgb(255, 98, 87, 0.2);
+  color: var(--tomato);
 }
-.text--input:focus {
+.input--text:focus {
   outline: none;
 }
 .btn--form {
-  padding: 1.2rem 0;
-  margin-top: 2rem;
+  padding: 2rem;
+  font-size: 1.4rem;
+  margin-top: 2.6rem;
   background-color: var(--dark--grey);
   color: var(--white);
   width: 100%;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font-weight: 500;
   cursor: pointer;
   letter-spacing: 0.6px;
 }
 .success {
-  width: 44rem;
-  height: 44rem;
+  max-width: 44rem;
+  max-height: 44rem;
   border-radius: 30px;
   background-color: var(--white);
   padding: 4rem;

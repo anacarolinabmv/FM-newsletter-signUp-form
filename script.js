@@ -1,9 +1,9 @@
 'use strict';
 
-const btnSubscribe = document.getElementById('btn');
+const btnSubscribe = document.getElementById('submit');
 const formInput = document.getElementById('input');
 const errorMessage = document.getElementById('error--msg');
-const formContainer = document.querySelector('.container');
+const formContainer = document.querySelector('.form--container');
 const successContainer = document.querySelector('.success');
 const btnDissmiss = document.getElementById('dissmiss');
 const emailDefault = document.querySelector('.email');
@@ -39,7 +39,7 @@ const validateForm = function (e) {
     successContainer.style.display = 'block';
   };
 
-  email ? subscribed() : addError();
+  valid ? subscribed() : addError();
 };
 btnSubscribe.addEventListener('click', validateForm);
 
