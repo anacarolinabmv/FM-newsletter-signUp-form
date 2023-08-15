@@ -3,12 +3,10 @@
 const btnSubscribe = document.getElementById('submit');
 const formInput = document.getElementById('input');
 const errorMessage = document.getElementById('error--msg');
-const formContainer = document.querySelector('.form--container');
+const formContainer = document.querySelector('.container');
 const successContainer = document.querySelector('.success');
-const btnDissmiss = document.getElementById('dissmiss');
+const btnDissmiss = document.getElementById('dismiss');
 const emailDefault = document.querySelector('.email');
-
-const emailDatabase = `carolinabmv@hotmail.com`;
 
 const addError = function () {
   errorMessage.classList.add('show--error');

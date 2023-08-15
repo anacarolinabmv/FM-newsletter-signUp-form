@@ -8,12 +8,10 @@
     <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   </head>
   <body>
-    <div class="form--container">
-      <div class="text">
+    <div class="container">
+      <div class="form--container">
         <h1>Stay updated!</h1>
-
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
-
         <ul>
           <li>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 21">
@@ -54,9 +52,9 @@
             name="input"
             class="input--text"
             id="input"
-            placeholder=" email@company.com "
+            placeholder="email@company.com"
             autocomplete="off" />
-          <button type="submit" class="btn--form btn" id="submit">Subscribe to monthly newsletter</button>
+          <button type="submit" class="btn btn--subscribe" id="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
       <div class="img">
@@ -199,23 +197,18 @@
         </svg>
       </div>
     </div>
-    <!-- Sign-up form end -->
 
-    <!-- Success message start -->
-
-    <!-- Thanks for subscribing! A confirmation email has been sent to ash@loremcompany.com. Please open it and click the
-    button inside to confirm your subscription. Dismiss message -->
-
-    <!-- Success message end -->
-
-    <!-- <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
-      <a href="#">Ana Carolina</a>.
-    </div> -->
     <div class="success">
       <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 21 21" class="success--icon">
+        <defs>
+          <linearGradient id="myGradient" gradientTransform="rotate(-20)">
+            <stop offset="10%" stop-color="rgb(255, 62, 131)" />
+            <stop offset="85%" stop-color="rgb(255, 106, 58)" />
+          </linearGradient>
+        </defs>
+
         <g fill="none">
-          <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+          <circle cx="10.5" cy="10.5" r="10.5" fill="url('#myGradient')" />
           <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
         </g>
       </svg>
@@ -225,7 +218,7 @@
         A confirmation email has been sent to <span class="email">ash@loremcompany.com</span>. Please open it and click
         the button inside to confirm your subscription.
       </p>
-      <button class="btn" id="dissmiss">Dissmiss message</button>
+      <button class="btn btn--dismiss" id="dismiss">Dismiss message</button>
     </div>
     <script src="script.js"></script>
   </body>
