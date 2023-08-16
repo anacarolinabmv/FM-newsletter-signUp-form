@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](images/screenshot.png)
+![](assets/images/screenshot.png)
 
 ### Links
 
@@ -52,10 +52,9 @@ oportunity to learn how to use SVG with media queries dinamically. Challenged al
 ### Continued development
 
 -Responsive Layouts
-
-- Media queries
-- SVG
-- Regex
+-Media queries
+-SVG
+-Regex
 
 ## Author
 
