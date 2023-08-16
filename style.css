@@ -90,7 +90,7 @@ ul li {
   font-weight: 500;
   display: none;
 }
-.show--error {
+.display--error {
   display: block;
 }
 .input--text {

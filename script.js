@@ -7,21 +7,47 @@ const formContainer = document.querySelector('.container');
 const successContainer = document.querySelector('.success');
 const btnDissmiss = document.getElementById('dismiss');
 const emailDefault = document.querySelector('.email');
+const unList = document.querySelector('ul');
 
+//Add list items
+const unListContent = [
+  `Product discovery and building what matters`,
+  `Measuring to ensure updates are a success`,
+  `And much more!`,
+];
+
+const addListItem = function (content) {
+  const html = `    <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 21">
+              <g fill="none">
+                <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+              </g>
+            </svg>
+            ${content}
+          </li>`;
+
+  unList.insertAdjacentHTML('afterbegin', html);
+};
+
+unListContent.forEach((content) => addListItem(content));
+
+//Return to inital UI
+btnDissmiss.addEventListener('click', () => {
+  formInput.value = '';
+  formContainer.style.display = 'grid';
+  successContainer.style.display = 'none';
+});
+
+//Form validation
 const addError = function () {
-  errorMessage.classList.add('show--error');
+  errorMessage.classList.add('display--error');
   formInput.classList.add('error');
 };
 const removeError = function () {
-  errorMessage.classList.remove('show--error');
+  errorMessage.classList.remove('display--error');
   formInput.classList.remove('error');
 };
-
-const restoreDefault = function () {
-  formInput.value = '';
-  removeError();
-};
-formInput.addEventListener('click', restoreDefault);
 
 const validateForm = function (e) {
   e.preventDefault();
@@ -41,13 +67,13 @@ const validateForm = function (e) {
 };
 btnSubscribe.addEventListener('click', validateForm);
 
-const init = function () {
+formInput.addEventListener('click', () => {
+  if (!formInput.classList.contains('error')) return;
   formInput.value = '';
-  formContainer.style.display = 'grid';
-  successContainer.style.display = 'none';
-};
-btnDissmiss.addEventListener('click', init);
+  removeError();
+});
 
+//UI image for different media queries
 const imgContainer = document.querySelector('.img');
 const svgDesktop = `
   <svg
@@ -210,7 +236,6 @@ const svgDesktop = `
     </g>
   </svg>
 `;
-
 const svgMobile = `
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -391,10 +416,8 @@ const mq = matchMedia('( max-width: 375px )');
 
 const updateMQ = function () {
   if (mq.matches) {
-    console.log('375');
     imgContainer.innerHTML = svgMobile;
   } else {
-    console.log('larger');
     imgContainer.innerHTML = svgDesktop;
   }
 };
