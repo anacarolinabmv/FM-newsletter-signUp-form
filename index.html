@@ -8,52 +8,54 @@
     <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   </head>
   <body>
-    <div class="container">
-      <div class="form--container">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul></ul>
+    <main>
+      <div class="container">
+        <div class="form--container">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul></ul>
 
-        <form>
-          <div class="form--labels">
-            <label for="input" class="label--email">Email address</label>
-            <small class="error--msg" id="error--msg">Valid email required</small>
-          </div>
-          <input
-            type="text"
-            name="input"
-            class="input--text"
-            id="input"
-            placeholder="email@company.com"
-            autocomplete="off" />
-          <button type="submit" class="btn btn--subscribe" id="submit">Subscribe to monthly newsletter</button>
-        </form>
+          <form>
+            <div class="form--labels">
+              <label for="input" class="label--email">Email address</label>
+              <small class="error--msg" id="error--msg">Valid email required</small>
+            </div>
+            <input
+              type="text"
+              name="input"
+              class="input--text"
+              id="input"
+              placeholder="email@company.com"
+              autocomplete="off" />
+            <button type="submit" class="btn btn--subscribe" id="submit">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <div class="img"></div>
       </div>
-      <div class="img"></div>
-    </div>
 
-    <div class="success">
-      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 21 21" class="success--icon">
-        <defs>
-          <linearGradient id="myGradient" gradientTransform="rotate(-20)">
-            <stop offset="10%" stop-color="rgb(255, 62, 131)" />
-            <stop offset="85%" stop-color="rgb(255, 106, 58)" />
-          </linearGradient>
-        </defs>
+      <div class="success">
+        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 21 21" class="success--icon">
+          <defs>
+            <linearGradient id="myGradient" gradientTransform="rotate(-20)">
+              <stop offset="10%" stop-color="rgb(255, 62, 131)" />
+              <stop offset="85%" stop-color="rgb(255, 106, 58)" />
+            </linearGradient>
+          </defs>
 
-        <g fill="none">
-          <circle cx="10.5" cy="10.5" r="10.5" fill="url('#myGradient')" />
-          <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-        </g>
-      </svg>
+          <g fill="none">
+            <circle cx="10.5" cy="10.5" r="10.5" fill="url('#myGradient')" />
+            <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+          </g>
+        </svg>
 
-      <h1>Thanks for subscribing!</h1>
-      <p>
-        A confirmation email has been sent to <span class="email">ash@loremcompany.com</span>. Please open it and click
-        the button inside to confirm your subscription.
-      </p>
-      <button class="btn btn--dismiss" id="dismiss">Dismiss message</button>
-    </div>
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to <span class="email">ash@loremcompany.com</span>. Please open it and
+          click the button inside to confirm your subscription.
+        </p>
+        <button class="btn btn--dismiss" id="dismiss">Dismiss message</button>
+      </div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
