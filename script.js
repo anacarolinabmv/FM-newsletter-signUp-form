@@ -27,7 +27,7 @@ const addListItem = function (content) {
             ${content}
           </li>`;
 
-  unList.insertAdjacentHTML('afterbegin', html);
+  unList.insertAdjacentHTML('beforeend', html);
 };
 
 unListContent.forEach((content) => addListItem(content));
