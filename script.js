@@ -412,15 +412,16 @@ const svgMobile = `
   </svg>
 `;
 
-const mq = matchMedia('( max-width: 375px )');
+const mq1 = window.matchMedia('( max-width: 375px )');
+const mq2 = window.matchMedia('( max-width: 495px ) and (min-width:376px)');
 
+const updateBtn = function () {
+  btnSubscribe.innerHTML = mq2.matches ? 'Subscribe' : 'Subscribe to monthly newsletter';
+};
 const updateMQ = function () {
-  if (mq.matches) {
-    imgContainer.innerHTML = svgMobile;
-  } else {
-    imgContainer.innerHTML = svgDesktop;
-  }
+  imgContainer.innerHTML = mq1.matches ? svgMobile : svgDesktop;
 };
 updateMQ();
 
-mq.addEventListener('change', updateMQ);
+mq1.addEventListener('change', updateMQ);
+mq2.addEventListener('change', updateBtn);
