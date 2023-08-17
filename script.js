@@ -35,7 +35,7 @@ unListContent.forEach((content) => addListItem(content));
 //Return to inital UI
 btnDissmiss.addEventListener('click', () => {
   formInput.value = '';
-  formContainer.style.display = 'grid';
+  formContainer.style.display = 'flex';
   successContainer.style.display = 'none';
 });
 
