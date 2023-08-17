@@ -395,7 +395,7 @@ ul li:not(:last-child) {
 @media (max-width: 375px) {
   body {
     height: 100vh;
-    width: 375px;
+    width: 100vw;
     padding: 0;
   }
 
