@@ -413,7 +413,7 @@ const svgMobile = `
 `;
 
 const mq1 = window.matchMedia('( max-width: 375px )');
-const mq2 = window.matchMedia('( max-width: 495px ) and (min-width:376px)');
+const mq2 = window.matchMedia('( max-width: 575px ) and (min-width:376px)');
 
 const updateBtn = function () {
   btnSubscribe.innerHTML = mq2.matches ? 'Subscribe' : 'Subscribe to monthly newsletter';
