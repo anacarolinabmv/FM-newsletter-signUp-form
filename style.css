@@ -23,7 +23,6 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--charcoal-grey);
-  padding: 0 2rem;
 }
 
 .container {
@@ -32,18 +31,17 @@ body {
   max-width: 90rem;
   border-radius: 40px;
   display: flex;
-  gap: 3rem;
-  padding: 3rem;
+  padding: 2.8rem;
 }
 
 .form--container {
   width: 50%;
-  padding: 2em 2.5em;
+  padding: 2em 4em 2em 2em;
 }
-.img {
+.img--container {
   width: 50%;
 }
-.img svg {
+.img--container img {
   width: 100%;
   height: 100%;
 }
@@ -62,9 +60,11 @@ p {
   font-weight: 400;
   font-size: 1.6rem;
 }
+
 p {
   line-height: 1.5;
 }
+
 ul {
   margin-top: 3em;
 }
@@ -72,11 +72,9 @@ ul {
 ul li {
   list-style: none;
   display: flex;
-  gap: 1em;
+  gap: 0.8em;
 }
-ul li:not(:last-child) {
-  margin-bottom: 1em;
-}
+
 ul li:not(:last-child) {
   margin-bottom: 1em;
 }
@@ -101,19 +99,19 @@ ul li:not(:last-child) {
 .display--error {
   display: block;
 }
-.input--text {
+.input--email {
   padding: 1.6rem;
   width: 100%;
   font-size: 1.6rem;
   border: 1px solid #bbb;
   border-radius: 8px;
 }
-.error {
+.error--border {
   border-color: rgb(255, 98, 87, 0.8);
   background-color: rgb(255, 98, 87, 0.2);
   color: var(--tomato);
 }
-.input--text:focus,
+.input--email:focus,
 .btn:focus {
   outline: none;
   box-shadow: 0px 0px 14px rgb(51, 51, 51, 0.4);
@@ -132,20 +130,15 @@ ul li:not(:last-child) {
   cursor: pointer;
   letter-spacing: 0.6px;
   box-shadow: 3px 3px 6px rgb(51, 51, 51, 0.1);
-}
-
-.btn--subscribe,
-.btn--dismiss {
   position: relative;
   z-index: 2;
 }
-.btn--subscribe:active,
-.btn--dismiss:active {
+
+.btn:active {
   box-shadow: 10px 10px 30px rgb(255, 106, 58, 0.5);
 }
 
-.btn--dismiss::before,
-.btn--subscribe::before {
+.btn::before {
   position: absolute;
   inset: 0;
   display: flex;
@@ -166,27 +159,27 @@ ul li:not(:last-child) {
   content: 'Dismiss message';
 }
 
-.btn--subscribe:hover::before,
-.btn--dismiss:hover::before {
+.btn:hover::before {
   opacity: 1;
 }
 
-.success {
-  max-width: 50rem;
+.success--container {
+  max-width: 40rem;
   border-radius: 30px;
   background-color: var(--white);
-  padding: 6rem;
+  padding: 5rem;
   display: none;
   animation: fadein 400ms;
-}
-
-.btn--dismiss:hover::before {
-  opacity: 1;
 }
 
 .success--icon {
   transform: scale(1.4);
 }
+.email {
+  font-weight: 600;
+}
+
+/*ANIMATIONS*/
 
 @keyframes fadein {
   from {
@@ -197,14 +190,9 @@ ul li:not(:last-child) {
   }
 }
 
-.email {
-  font-weight: 600;
-}
+/*MEDIA QUERIES*/
 
-@media (max-width: 920px) {
-  .container {
-    gap: 2rem;
-  }
+@media (max-width: 880px) {
   h1 {
     font-size: 4.8rem;
   }
@@ -214,9 +202,12 @@ ul li:not(:last-child) {
 }
 
 @media (max-width: 837px) {
+  .form--container {
+    padding-right: 3rem;
+  }
   h1 {
     font-size: 4.4rem;
-    margin: 0.5em 0 0.5em;
+    /* margin: 0.5em 0 0.5em; */
   }
   ul {
     margin-top: 2em;
@@ -232,29 +223,19 @@ ul li:not(:last-child) {
 @media (max-width: 787px) {
   .container {
     padding: 2rem;
-    gap: 1.5rem;
   }
   h1 {
     font-size: 4rem;
-  }
-
-  .container {
-    gap: 1rem;
-  }
-  .input--text {
-    padding: 1.4rem 1.6rem;
-  }
-  .btn {
-    padding: 1.2em 0;
   }
 }
 
 @media (max-width: 718px) {
   h1 {
+    margin-top: 0.6em;
     font-size: 4rem;
   }
   .form--container {
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem 1.5rem 1.5rem;
   }
   p,
   li {
@@ -266,43 +247,44 @@ ul li:not(:last-child) {
     font-size: 3.6rem;
   }
   .form--container {
-    padding: 1.25rem;
+    padding-right: 2rem;
   }
-  p,
-  li {
-    font-size: 1.4rem;
-  }
+
   .form--labels {
     margin-top: 2rem;
   }
-  .input--text {
-    padding: 1.2rem 1.6rem;
+  .input--email {
+    font-size: 1.5rem;
+    padding: 1em 1.6em;
   }
   .btn {
-    padding: 1em 0;
-    margin-top: 1.2rem;
+    font-size: 1.5rem;
+    padding: 1.2em 0;
+    margin-top: 1.2em;
   }
 }
 
-@media (max-width: 619px) {
+@media (max-width: 620px) {
+  .container {
+    padding: 1.5rem;
+  }
+  .form--container {
+    width: 55%;
+  }
   h1 {
     font-size: 3.4rem;
   }
-  .form--container {
-    padding: 1rem;
-  }
 
+  ul,
   .form--labels {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
-  .input--text {
-    padding: 1rem;
-    font-size: 1.4rem;
+  .input--email {
+    padding: 0.8em 1em;
   }
   .btn {
     padding: 1em 0;
-    margin-top: 1.2rem;
-    font-size: 1.2rem;
+    margin-top: 1em;
   }
 }
 
@@ -312,116 +294,39 @@ ul li:not(:last-child) {
   }
   .container {
     padding: 1.5rem;
-    gap: 0.5rem;
     border-radius: 20px;
   }
   .form--container {
     width: 52%;
   }
-  .img {
-    width: 48%;
-  }
   p {
     line-height: 1.2;
-  }
-  ul {
-    margin-top: 1.2em;
-  }
-  ul li:not(:last-child) {
-    margin-bottom: 0.2em;
-  }
-  .form--labels {
-    margin-top: 1.4rem;
   }
 }
 
 @media (max-width: 495px) {
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  .input--text {
-    padding: 0.6rem 1rem;
-  }
-  .btn {
-    padding: 0.8em 0;
-    margin-top: 0.5rem;
-  }
-  p,
-  li {
-    font-size: 1.3rem;
-  }
-  .form--labels,
-  ul {
-    margin-top: 1.2rem;
-  }
-  .input--text,
-  .btn {
-    border-radius: 4px;
-  }
-}
-
-@media (max-width: 426px) {
   .container {
-    gap: 0;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  p,
-  li {
-    font-size: 1.2rem;
-  }
-  .input--text,
-  .btn {
-    font-size: 1.2rem;
-  }
-  .btn {
-    padding: 0.6rem 0;
-  }
-  .label--email {
-    font-size: 1rem;
-  }
-  .form--labels,
-  ul {
-    margin-top: 1rem;
-  }
-  .input--text,
-  .btn {
-    border-radius: 4px;
-  }
-}
-
-@media (max-width: 375px) {
-  body {
-    height: 100vh;
-    width: 100vw;
-    padding: 0;
-  }
-
-  .container {
-    width: 100%;
-    height: 100%;
+    min-height: 100vh;
     padding: 0;
     flex-direction: column-reverse;
     border-radius: 0;
-    column-gap: 0;
     background-color: #fff;
   }
   .form--container {
     width: 100%;
-    padding: 0em 2em 3em;
+    padding: 2rem 4rem;
   }
-  .img {
+  .img--container {
     width: 100%;
   }
   h1 {
     font-size: 4.2rem;
-    margin: 1em 0 0.6em;
+    /* margin: 1em 0 0.6em; */
   }
   p,
+  li,
   li {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   ul {
     margin-top: 2em;
@@ -429,24 +334,21 @@ ul li:not(:last-child) {
   ul li:not(:last-child) {
     margin-bottom: 1em;
   }
-  svg[width='375px'] {
-    height: 100%;
-    width: 100%;
-  }
+
   .form--labels {
     margin-top: 3em;
   }
   .label--email {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
-  .input--text {
-    padding: 1.6rem;
-    font-size: 1.6rem;
+  .input--email {
+    font-size: 1.8rem;
+    padding: 1.3em;
     border-radius: 8px;
   }
   .btn {
     padding: 1.4em 0;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-top: 1em;
     border-radius: 8px;
   }

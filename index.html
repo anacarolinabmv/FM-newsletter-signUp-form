@@ -13,41 +13,33 @@
         <div class="form--container">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul></ul>
+          <ul>
+            <li>
+              <img src="/assets/images/icon-list.svg" alt="List icon" />Product discovery and building what matters
+            </li>
+            <li><img src="/assets/images/icon-list.svg" alt="List icon" />Measuring to ensure updates are a success</li>
+            <li><img src="/assets/images/icon-list.svg" alt="List icon" />And much more</li>
+          </ul>
 
           <form>
             <div class="form--labels">
               <label for="input" class="label--email">Email address</label>
               <small class="error--msg" id="error--msg">Valid email required</small>
             </div>
-            <input
-              type="text"
-              name="input"
-              class="input--text"
-              id="input"
-              placeholder="email@company.com"
-              autocomplete="off" />
-            <button type="submit" class="btn btn--subscribe" id="submit">Subscribe to monthly newsletter</button>
+            <input type="text" class="input--email" id="input" placeholder="email@company.com" autocomplete="off" />
+            <button type="submit" class="btn btn--subscribe" id="subscribe">Subscribe to monthly newsletter</button>
           </form>
         </div>
-        <div class="img"></div>
+        <div class="img--container">
+          <picture>
+            <source media="(min-width: 495px)" srcset="/assets/images/illustration-sign-up-desktop.svg" />
+            <img src="/assets/images/illustration-sign-up-mobile.svg" alt="" />
+          </picture>
+        </div>
       </div>
 
-      <div class="success">
-        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 21 21" class="success--icon">
-          <defs>
-            <linearGradient id="myGradient" gradientTransform="rotate(-20)">
-              <stop offset="10%" stop-color="rgb(255, 62, 131)" />
-              <stop offset="85%" stop-color="rgb(255, 106, 58)" />
-            </linearGradient>
-          </defs>
-
-          <g fill="none">
-            <circle cx="10.5" cy="10.5" r="10.5" fill="url('#myGradient')" />
-            <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-          </g>
-        </svg>
-
+      <div class="success--container">
+        <img src="/assets/images/icon-success.svg" />
         <h1>Thanks for subscribing!</h1>
         <p>
           A confirmation email has been sent to <span class="email">ash@loremcompany.com</span>. Please open it and
